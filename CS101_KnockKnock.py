@@ -22,6 +22,18 @@ class KnockKnockJokes:
         if who_response == f"{punchline_pt1} who?":
             return final_punchline + "Ba Dum Ta Tuss!"
 
+animal_jokes = {
+    {'punchline1':'Moose', "final_punchline":'Moose you bein\' so nosy!'},
+    {'punchline1':'Poodle', "final_punchline":'Poodle a lil mustard on my hot dog please!'},
+    {'punchline1':'Iguana', "final_punchline":'Iguana hold your hand.'},
+    {'punchline1':'Goat', "final_punchline":'Goat to the door and find out!'},
+    {'punchline1':'Alpaca', "final_punchline":'Alpaca the trunk, you pack-a the suitcase!'}
+}
+food_jokes = {
+    {}
+}
+scary_jokes = {}
+out_of_this_world_jokes = {}
 
 
 player = input("\nWelcome to the World of Knock Knock Jokes! Now please tell us, who is there?\n")
