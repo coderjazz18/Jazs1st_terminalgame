@@ -1,3 +1,11 @@
+# File finally acting as it should
+
+
+# Knock Knock Class
+class KnockKnockJokes:
+    def __init__(self) -> None:
+        pass
+
 
 player = input("\nWelcome to the World of Knock Knock Jokes! Now please tell us, who is there?\n")
 joke_categories = ['Animal', 'Food', 'Scary', 'Out of this WORLD!']
@@ -8,3 +16,4 @@ for joke in joke_categories:
 player_category = input("\nChoose wisely.... ")
 
 print("\nExcellent Choice!")
+
