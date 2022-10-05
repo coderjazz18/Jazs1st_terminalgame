@@ -1,0 +1,9 @@
+Knock Knock Jokes
+
+That's it, and that's what itll bee.
+
+
+What does your program do? - It displays knock knock Jokes
+How will it work in a terminal? On the command of user input
+Is it one player or two players? One player
+
