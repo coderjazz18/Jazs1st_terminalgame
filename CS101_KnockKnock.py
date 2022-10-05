@@ -3,8 +3,13 @@
 
 # Knock Knock Class
 class KnockKnockJokes:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, player1, category):
+        self.player1 = player1
+        self.category = category
+    
+    def __repr__(self):
+        message = f"So you've chosen to do the most bamboozlin of {self.category} Knock Knock Jokes! Very well, we shall begin!"
+        return message
 
 
 player = input("\nWelcome to the World of Knock Knock Jokes! Now please tell us, who is there?\n")
@@ -15,5 +20,7 @@ for joke in joke_categories:
 
 player_category = input("\nChoose wisely.... ")
 
-print("\nExcellent Choice!")
+print("\nExcellent Choice!\n")
 
+practice = KnockKnockJokes(player, player_category)
+print(practice)
