@@ -40,8 +40,14 @@ food_jokes = {
     {'punchline1':'Butter', "final_punchline":'Butter bring an umbrella - it looks like it\'s rainin\'!'}
 }
 
-# The scary jokes
-spooky_jokes = {}
+# The spooky jokes
+spooky_jokes = {
+    {'punchline1':'Harry', "final_punchline":'Harry spider crawling up your back!'},
+    {'punchline1':'Ivana', "final_punchline":'Ivana suck your blood!'},
+    {'punchline1':'Ooze', "final_punchline":'Ooze that monster under yer bed!'},
+    {'punchline1':'Howie', "final_punchline":'Howie gonna hide this dead body?'},
+    {'punchline1':'Doughnut', "final_punchline":'Doughnut worry, I shall give yer a swift death!'}
+}
 
 # the random jokes
 out_of_this_world_jokes = {}
