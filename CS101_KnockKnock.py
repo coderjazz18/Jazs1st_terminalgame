@@ -20,8 +20,9 @@ class KnockKnockJokes:
     
     def punchline(self, who_response, punchline_pt1, final_punchline):
         if who_response == f"{punchline_pt1} who?":
-            return final_punchline + "Ba Dum Ta Tuss!"
+            return final_punchline + "Ba Dum Ta Tss!"
 
+# the ANimal Jokes
 animal_jokes = {
     {'punchline1':'Moose', "final_punchline":'Moose you bein\' so nosy!'},
     {'punchline1':'Poodle', "final_punchline":'Poodle a lil mustard on my hot dog please!'},
@@ -29,15 +30,26 @@ animal_jokes = {
     {'punchline1':'Goat', "final_punchline":'Goat to the door and find out!'},
     {'punchline1':'Alpaca', "final_punchline":'Alpaca the trunk, you pack-a the suitcase!'}
 }
+
+# The Food jokes
 food_jokes = {
-    {}
+    {'punchline1':'Peas', "final_punchline":'Peas to meet you!'},
+    {'punchline1':'Potatoes', "final_punchline":'Potatoes don\'t have a last name silly!'},
+    {'punchline1':'Ice-cream Soda', "final_punchline":'ICE SCREAM SODA WHOLE WORLD CAN HEAR ME!'},
+    {'punchline1':'Muffin', "final_punchline":'Theres muffin the matter with me. I\'m doing fine!'},
+    {'punchline1':'Butter', "final_punchline":'Butter bring an umbrella - it looks like it\'s rainin\'!'}
 }
-scary_jokes = {}
+
+# The scary jokes
+spooky_jokes = {}
+
+# the random jokes
 out_of_this_world_jokes = {}
 
 
+# PLayer & Welcome
 player = input("\nWelcome to the World of Knock Knock Jokes! Now please tell us, who is there?\n")
-joke_categories = ['Animal', 'Food', 'Scary', 'Out of this WORLD!']
+joke_categories = ['Animal', 'Food', 'Spooky', 'Out of this WORLD!']
 print(f"\nNow, {player}, from the categories shown, please choose your category:")
 for joke in joke_categories:
     print(joke)
