@@ -19,6 +19,7 @@ class KnockKnockJokes:
     def InitalKnock(self):
         print("\nKnock Knock...")
 
+    # NEED TO FIGURE OUT HOW TO GET THIS PART TO WORK NEEP TO LOOP THROUGH DICTIONARIES AND GET THE JOKE
     def whosThere(self, response, jokes):
         lc_response = response.lower()
 
