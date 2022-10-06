@@ -50,7 +50,13 @@ spooky_jokes = {
 }
 
 # the random jokes
-out_of_this_world_jokes = {}
+out_of_this_world_jokes = {
+    {'punchline1':'Ash', "final_punchline":'Sounds like you have a cold!'},
+    {'punchline1':'Sadie', "final_punchline":'Sadie magic word and watch me disappear!'},
+    {'punchline1':'Cash', "final_punchline":'No thanks, I\'ll have some peanuts.'},
+    {'punchline1':'Luke', "final_punchline":'Luke through the peephole and find out!'},
+    {'punchline1':'Roach', "final_punchline":'Roach you an email last week and i\'m still waiting for a response.'}
+}
 
 
 # PLayer & Welcome
