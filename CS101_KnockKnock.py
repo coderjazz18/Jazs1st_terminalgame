@@ -11,10 +11,12 @@ class KnockKnockJokes:
         self.category = category
     
     def __repr__(self):
+        # message initiated for the player
         message = f"So you've chosen to do the most bamboozlin of {self.category} Knock Knock Jokes! Very well, we shall begin!"
         return message
     
     def InitalKnock(self):
+        # First set of Knock kNock
         print("\nKnock Knock...")
 
     # NEED TO FIGURE OUT HOW TO GET THIS PART TO WORK NEEP TO LOOP THROUGH DICTIONARIES AND GET THE JOKE
@@ -23,9 +25,10 @@ class KnockKnockJokes:
 
         # chooses a random joke
         chosen_joke = random.choice(jokes)
-        punchline = chosen_joke['punchline']
+        # gets the first punchline to choosen joke
+        punchline = chosen_joke[0]
 
-        if lc_response == str and (response == "whos there?" or "whos there"):
+        if response == "whos there?" or response == "whos there":
             return punchline
         else:
             return "Pssssttttt!!! You're supposed to say, 'Who's there?' >.<"
@@ -38,38 +41,38 @@ class KnockKnockJokes:
 
 # the ANimal Jokes
 animal_jokes = [
-    {'punchline':'Moose', "final_punchline":'Moose you bein\' so nosy!'},
-    {'punchline':'Poodle', "final_punchline":'Poodle a lil mustard on my hot dog please!'},
-    {'punchline':'Iguana', "final_punchline":'Iguana hold your hand.'},
-    {'punchline':'Goat', "final_punchline":'Goat to the door and find out!'},
-    {'punchline':'Alpaca', "final_punchline":'Alpaca the trunk, you pack-a the suitcase!'}
+    ['Moose', 'Moose you bein\' so nosy!'],
+    ['Poodle', 'Poodle a lil mustard on my hot dog please!'],
+    ['Iguana', 'Iguana hold your hand.'],
+    ['Goat', 'Goat to the door and find out!'],
+    ['Alpaca', 'Alpaca the trunk, you pack-a the suitcase!']
     ]
 
 # The Food jokes
 food_jokes = [
-    {'punchline':'Peas', "final_punchline":'Peas to meet you!'},
-    {'punchline':'Potatoes', "final_punchline":'Potatoes don\'t have a last name silly!'},
-    {'punchline':'Ice-cream Soda', "final_punchline":'ICE SCREAM SODA WHOLE WORLD CAN HEAR ME!'},
-    {'punchline':'Muffin', "final_punchline":'Theres muffin the matter with me. I\'m doing fine!'},
-    {'punchline':'Butter', "final_punchline":'Butter bring an umbrella - it looks like it\'s rainin\'!'}
+    ['Peas', 'Peas to meet you!'],
+    ['Potatoes', 'Potatoes don\'t have a last name silly!'],
+    ['Ice-cream Soda', 'ICE SCREAM SODA WHOLE WORLD CAN HEAR ME!'],
+    ['Muffin', 'Theres muffin the matter with me. I\'m doing fine!'],
+    ['Butter', 'Butter bring an umbrella - it looks like it\'s rainin\'!']
 ]
 
 # The spooky jokes
 spooky_jokes = [
-    {'punchline':'Harry', "final_punchline":'Harry spider crawling up your back!'},
-    {'punchline':'Ivana', "final_punchline":'Ivana suck your blood!'},
-    {'punchline':'Ooze', "final_punchline":'Ooze that monster under yer bed!'},
-    {'punchline':'Howie', "final_punchline":'Howie gonna hide this dead body?'},
-    {'punchline':'Doughnut', "final_punchline":'Doughnut worry, I shall give yer a swift death!'}
+    ['Harry', 'Harry spider crawling up your back!'],
+    ['Ivana', 'Ivana suck your blood!'],
+    ['Ooze', 'Ooze that monster under yer bed!'],
+    ['Howie', 'Howie gonna hide this dead body?'],
+    ['Doughnut', 'Doughnut worry, I shall give yer a swift death!']
 ]
 
 # the random jokes
 out_of_this_world_jokes = [
-    {'punchline':'Ash', "final_punchline":'Sounds like you have a cold!'},
-    {'punchline':'Sadie', "final_punchline":'Sadie magic word and watch me disappear!'},
-    {'punchline':'Cash', "final_punchline":'No thanks, I\'ll have some peanuts.'},
-    {'punchline':'Luke', "final_punchline":'Luke through the peephole and find out!'},
-    {'punchline':'Roach', "final_punchline":'Roach you an email last week and i\'m still waiting for a response.'}
+    ['Ash', 'Sounds like you have a cold!'],
+    ['Sadie', 'Sadie magic word and watch me disappear!'],
+    ['Cash', 'No thanks, I\'ll have some peanuts.'],
+    ['Luke', 'Luke through the peephole and find out!'],
+    ['Roach', 'Roach you an email last week and i\'m still waiting for a response.']
 ]
 
 # PLayer & Welcome
@@ -96,4 +99,5 @@ if category_lowercase == "animal":
     player_response = input()
     # respond to the player's 'whos there'
     animal_player.whosThere(player_response, animal_jokes)
+
 
