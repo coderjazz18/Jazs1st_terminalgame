@@ -28,6 +28,7 @@ class KnockKnockJokes:
         chosen_joke = random.choice(jokes)
         # gets the first punchline to choosen joke / self added so it can be accessed
         punchline = chosen_joke[0]
+        final_punchline = chosen_joke[1]
 
         if self.response == "whos there?" or self.response == "whos there":
             print(punchline) # changed from return to print
@@ -35,11 +36,9 @@ class KnockKnockJokes:
             print("Pssssttttt!!! You're supposed to say, 'Who's there?' >.<")
     
         who_response = input()
-        final_punchline = chosen_joke[1]
-
         lc_whoRsp = who_response.lower()
-        if lc_whoRsp == punchline + " who?" or lc_whoRsp == punchline + " who":
-            print(final_punchline + "Ba Dum Ta Tss!")
+        if (lc_whoRsp ==  f"{punchline.lower()} who?") or (lc_whoRsp == f"{punchline.lower()} who"):
+            print(f"{final_punchline}\nBa Dum Ta Tss!")
         else:
             print("Pretend you're an owl and say, who! Try Again!")
 
@@ -94,11 +93,13 @@ print("\nExcellent Choice!\n")
 
 # makes sure ot lowercase whatever was typed by player
 category_lowercase = player_category.lower()
-if category_lowercase == "animal":
-    animal_player = KnockKnockJokes(player, player_category)
-    print(animal_player)
-    # The game begins
-    animal_player.InitalKnock()
-    # respond to the player's 'whos there' and finish the joke
-    animal_player.finishTheJoke(animal_jokes) # IT FINALLY WORKED!!
+while category_lowercase:
+
+    if category_lowercase == "animal":
+        animal_player = KnockKnockJokes(player, player_category)
+        print(animal_player)
+        # The game begins
+        animal_player.InitalKnock()
+        # respond to the player's 'whos there' and finish the joke
+        animal_player.finishTheJoke(animal_jokes)
 
