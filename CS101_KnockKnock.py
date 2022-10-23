@@ -29,9 +29,8 @@ class KnockKnockJokes:
         # gets the first punchline to choosen joke / self added so it can be accessed
         punchline = chosen_joke[0]
         final_punchline = chosen_joke[1]
-
         if self.response == "whos there?" or self.response == "whos there":
-            print(punchline) # changed from return to print
+            print(punchline) #changed from return to print
         else:
             print("Pssssttttt!!! You're supposed to say, 'Who's there?' >.<")
     
@@ -93,13 +92,34 @@ print("\nExcellent Choice!\n")
 
 # makes sure ot lowercase whatever was typed by player
 category_lowercase = player_category.lower()
-while category_lowercase:
+if category_lowercase == "animal":
+    animal_player = KnockKnockJokes(player, player_category)
+    print(animal_player)
+    # The game begins
+    animal_player.InitalKnock()
+    # respond to the player's 'whos there' and finish the joke
+    animal_player.finishTheJoke(animal_jokes)
 
-    if category_lowercase == "animal":
-        animal_player = KnockKnockJokes(player, player_category)
-        print(animal_player)
-        # The game begins
-        animal_player.InitalKnock()
-        # respond to the player's 'whos there' and finish the joke
-        animal_player.finishTheJoke(animal_jokes)
+if category_lowercase == "food":
+    food_player = KnockKnockJokes(player, player_category)
+    print(food_player)
+    # The game begins
+    food_player.InitalKnock()
+    # respond to the player's 'whos there' and finish the joke
+    food_player.finishTheJoke(food_jokes)
 
+if category_lowercase == "spooky":
+    spooky_player = KnockKnockJokes(player, player_category)
+    print(spooky_player)
+    # The game begins
+    spooky_player.InitalKnock()
+    # respond to the player's 'whos there' and finish the joke
+    spooky_player.finishTheJoke(spooky_jokes)
+
+if category_lowercase == "out of this world":
+    out_of_this_world_player = KnockKnockJokes(player, player_category)
+    print(out_of_this_world_player)
+    # The game begins
+    out_of_this_world_player.InitalKnock()
+    # respond to the player's 'whos there' and finish the joke
+    out_of_this_world_player.finishTheJoke(out_of_this_world_jokes)
