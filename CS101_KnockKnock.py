@@ -19,27 +19,29 @@ class KnockKnockJokes:
         # First set of Knock kNock
         print("\nKnock Knock...")
         # the player responds
-        self.response = input()
+        self.response = input() # added to the class instead of being out of it
 
-    # NEED TO FIGURE OUT HOW TO GET THIS PART TO WORK NEEP TO LOOP THROUGH DICTIONARIES AND GET THE JOKE
-    def whosThere(self, jokes):
+    def finishTheJoke(self, jokes):
         lc_response = self.response.lower()
 
         # chooses a random joke
         chosen_joke = random.choice(jokes)
-        # gets the first punchline to choosen joke
+        # gets the first punchline to choosen joke / self added so it can be accessed
         punchline = chosen_joke[0]
 
         if self.response == "whos there?" or self.response == "whos there":
-            print(punchline)
+            print(punchline) # changed from return to print
         else:
             print("Pssssttttt!!! You're supposed to say, 'Who's there?' >.<")
     
-    def punchline(self, who_response, punchline_pt1, final_punchline):
-        if who_response == f"{punchline_pt1} who?":
-            return final_punchline + "Ba Dum Ta Tss!"
+        who_response = input()
+        final_punchline = chosen_joke[1]
+
+        lc_whoRsp = who_response.lower()
+        if lc_whoRsp == punchline + " who?" or lc_whoRsp == punchline + " who":
+            print(final_punchline + "Ba Dum Ta Tss!")
         else:
-            return "Pretend you're an owl and say, who?"
+            print("Pretend you're an owl and say, who! Try Again!")
 
 # the ANimal Jokes
 animal_jokes = [
@@ -97,7 +99,6 @@ if category_lowercase == "animal":
     print(animal_player)
     # The game begins
     animal_player.InitalKnock()
-    # respond to the player's 'whos there'
-    animal_player.whosThere(animal_jokes)
-
+    # respond to the player's 'whos there' and finish the joke
+    animal_player.finishTheJoke(animal_jokes) # IT FINALLY WORKED!!
 
