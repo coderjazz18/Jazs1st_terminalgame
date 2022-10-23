@@ -18,20 +18,22 @@ class KnockKnockJokes:
     def InitalKnock(self):
         # First set of Knock kNock
         print("\nKnock Knock...")
+        # the player responds
+        self.response = input()
 
     # NEED TO FIGURE OUT HOW TO GET THIS PART TO WORK NEEP TO LOOP THROUGH DICTIONARIES AND GET THE JOKE
-    def whosThere(self, response, jokes):
-        lc_response = response.lower()
+    def whosThere(self, jokes):
+        lc_response = self.response.lower()
 
         # chooses a random joke
         chosen_joke = random.choice(jokes)
         # gets the first punchline to choosen joke
         punchline = chosen_joke[0]
 
-        if response == "whos there?" or response == "whos there":
-            return punchline
+        if self.response == "whos there?" or self.response == "whos there":
+            print(punchline)
         else:
-            return "Pssssttttt!!! You're supposed to say, 'Who's there?' >.<"
+            print("Pssssttttt!!! You're supposed to say, 'Who's there?' >.<")
     
     def punchline(self, who_response, punchline_pt1, final_punchline):
         if who_response == f"{punchline_pt1} who?":
@@ -95,9 +97,7 @@ if category_lowercase == "animal":
     print(animal_player)
     # The game begins
     animal_player.InitalKnock()
-    # the player responds
-    player_response = input()
     # respond to the player's 'whos there'
-    animal_player.whosThere(player_response, animal_jokes)
+    animal_player.whosThere(animal_jokes)
 
 
